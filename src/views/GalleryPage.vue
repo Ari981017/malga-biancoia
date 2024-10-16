@@ -3,9 +3,7 @@
       <h1>Galleria</h1>
       <p>Guarda le immagini del nostro agriturismo.</p>
       <div>
-        <!-- <img src="../assets/image1.jpg" alt="Immagine 1" />
-        <img src="../assets/image2.jpg" alt="Immagine 2" />
-        <img src="../assets/image3.jpg" alt="Immagine 3" /> -->
+        <img src="../assets/logo.png" alt="Immagine 1" />
         <!-- Aggiungi altre immagini qui -->
       </div>
     </div>
