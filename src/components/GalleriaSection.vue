@@ -1,4 +1,5 @@
 <template>
+   <section id="gallery">
     <div>
       <h1>Galleria</h1>
       <p>Guarda le immagini del nostro agriturismo.</p>
@@ -7,11 +8,12 @@
         <!-- Aggiungi altre immagini qui -->
       </div>
     </div>
+   </section>
   </template>
   
   <script>
   export default {
-    name: 'GalleryPage',
+    name: 'GalleriaSection',
   };
   </script>
   

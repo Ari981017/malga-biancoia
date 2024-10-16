@@ -1,5 +1,6 @@
 <template>
-  <div>
+   <section id="menu">
+    <div>
     <h1>Menu</h1>
     <ul>
       <li>Antipasti</li>
@@ -9,10 +10,11 @@
     </ul>
     <p>Scopri le delizie culinarie che offriamo!</p>
   </div>
+   </section>
 </template>
 
 <script>
 export default {
-  name: 'MenuPage',
+  name: 'MenuSection',
 };
 </script>

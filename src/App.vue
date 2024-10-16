@@ -12,28 +12,38 @@
       >
         <v-list color="transparent">
           <v-list-item prepend-icon="mdi-view-dashboard">
-            <router-link to="/">Home</router-link></v-list-item>
-          <v-list-item prepend-icon="mdi-account-box">
-            <router-link to="/menu">Menu</router-link>
+            <v-btn text @click="scrollTo('home')">Home</v-btn>
           </v-list-item>
-          <v-list-item prepend-icon="mdi-gavel">
-            <router-link to="/itinerario">Itinerario</router-link>
+          <v-list-item prepend-icon="mdi-view-dashboard">
+            <v-btn text @click="scrollTo('menu')">Menu</v-btn>
           </v-list-item>
-          <v-list-item prepend-icon="mdi-gavel">
-            <router-link to="/gallery">Galleria</router-link>
+          <v-list-item prepend-icon="mdi-view-dashboard">
+            <v-btn text @click="scrollTo('walk')">Itinerario</v-btn>
+          </v-list-item>
+          <v-list-item prepend-icon="mdi-view-dashboard">
+            <v-btn text @click="scrollTo('gallery')">Galleria</v-btn>
           </v-list-item>
         </v-list>
       </v-navigation-drawer>
       </v-toolbar>
     </v-container>
-    <router-view />
+    <v-container>
+        <InfoSection />
+        <MenuSection />
+        <ItinerarioSection />
+        <GalleriaSection />
+      </v-container>
   </v-app>
 </template>      
 
 <script>
 import { defineComponent } from 'vue';
 import { VApp, VAppBarNavIcon, VList, VListItem, VNavigationDrawer, VToolbar } from 'vuetify/components';
-import { useDisplay } from 'vuetify';  // Importazione di useDisplay
+import { useDisplay } from 'vuetify';
+import InfoSection from './components/InfoSection.vue';
+import MenuSection from './components/MenuSection.vue';
+import ItinerarioSection from './components/ItinerarioSection.vue';
+import GalleriaSection from './components/GalleriaSection.vue';
 
 export default defineComponent({
   name: 'App',
@@ -43,7 +53,11 @@ export default defineComponent({
     VAppBarNavIcon,
     VNavigationDrawer,
     VList,
-    VListItem
+    VListItem,
+    InfoSection,
+    MenuSection,
+    ItinerarioSection,
+    GalleriaSection
   },
   data() {
     return {
@@ -55,6 +69,15 @@ export default defineComponent({
     return {
       isMobile: mobile
     };
+  },
+  methods: {
+    scrollTo(sectionId) {
+      this.drawer = false;
+      const element = document.getElementById(sectionId);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
   }
 });
 </script>
