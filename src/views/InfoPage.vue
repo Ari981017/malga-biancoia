@@ -9,7 +9,6 @@
         ></v-img>
       </v-col>
 
-      <!-- Colonna testo -->
       <v-col cols="12" md="6" class="d-flex flex-column justify-center" style="padding-top: 32px; padding-bottom: 32px;">
         <h1 class="text-center display-3">Chi siamo</h1>
         <p class="text-center" style="font-size: clamp(14px, 0.875rem + ((1vw - 3.2px) * 0.268), 17px);">
